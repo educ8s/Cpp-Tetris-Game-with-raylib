@@ -1,8 +1,5 @@
 #include "block.h"
-#include <map>
 #include "position.h"
-
-using namespace std;
 
 class LBlock : public Block
 {

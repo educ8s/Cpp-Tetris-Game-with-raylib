@@ -1,5 +1,4 @@
-#ifndef POSITION
-#define POSITION
+#pragma once
 
 class Position
 {
@@ -8,5 +7,3 @@ public:
     int row;
     int column;
 };
-
-#endif

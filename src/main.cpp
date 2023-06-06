@@ -1,7 +1,7 @@
-#include <iostream>
 #include <raylib.h>
-#include "colors.h"
 #include "game.h"
+#include "colors.h"
+#include <iostream>
 
 double lastUpdateTime = 0;
 
@@ -21,43 +21,38 @@ int main()
     InitWindow(500, 620, "raylib Tetris");
     SetTargetFPS(60);
 
-    Game game = Game();
+    Font font = LoadFontEx("Font/monogram.ttf", 64, 0, 0);
 
-    Font font = LoadFontEx("Font/monogram.ttf", 64, 0, 250);
+    Game game = Game();
 
     while (WindowShouldClose() == false)
     {
         UpdateMusicStream(game.music);
-        BeginDrawing();
-
-        if (EventTriggered(0.2) && game.gameOver == false)
+        game.HandleInput();
+        if (EventTriggered(0.2))
         {
             game.MoveBlockDown();
         }
 
-        game.HandleInput();
-
+        BeginDrawing();
         ClearBackground(darkBlue);
-
-        DrawTextEx(font, "Score", {365, 15}, 38, 2, white);
-        DrawTextEx(font, "Next", {375, 175}, 38, 2, white);
-        DrawRectangleRounded(Rectangle{320, 55, 170, 60}, 0.3, 6, lightBlue);
-        DrawRectangleRounded(Rectangle{320, 215, 170, 180}, 0.3, 6, lightBlue);
+        DrawTextEx(font, "Score", {365, 15}, 38, 2, WHITE);
+        DrawTextEx(font, "Next", {370, 175}, 38, 2, WHITE);
+        if (game.gameOver)
+        {
+            DrawTextEx(font, "GAME OVER", {320, 450}, 38, 2, WHITE);
+        }
+        DrawRectangleRounded({320, 55, 170, 60}, 0.3, 6, lightBlue);
 
         char scoreText[10];
         sprintf(scoreText, "%d", game.score);
         Vector2 textSize = MeasureTextEx(font, scoreText, 38, 2);
 
-        DrawTextEx(font, scoreText, {320 + (170 - textSize.x) / 2, 65}, 38, 2, white);
-
-        if (game.gameOver)
-            DrawTextEx(font, "GAME OVER", {320, 450}, 38, 2, white);
-
+        DrawTextEx(font, scoreText, {320 + (170 - textSize.x) / 2, 65}, 38, 2, WHITE);
+        DrawRectangleRounded({320, 215, 170, 180}, 0.3, 6, lightBlue);
         game.Draw();
-
         EndDrawing();
     }
 
     CloseWindow();
-    return 0;
 }
