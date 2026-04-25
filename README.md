@@ -1,22 +1,48 @@
 # C++ Tetris Game using raylib
 
-🕹️🐍🎮 This GitHub repository is home to the full source code for a Tetris game built with the C++ programming language and the raylib library. 💻🎨🎧 The game uses various raylib functions for graphics, input handling, and audio and can be played on Windows, macOS, and Linux computers. 🔍📖 The code is well-structured and easy to read, making it a valuable resource for aspiring game developers looking to learn about raylib game programming.
+![Language](https://img.shields.io/badge/language-C%2B%2B-brightgreen)
+![Library](https://img.shields.io/badge/library-raylib-00d4aa)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)
+![License](https://img.shields.io/badge/license-MIT-orange)
 
-If you want to learn how to build your own Tetris game with raylib, check out the accompanying <a href="https://youtu.be/wVYKG_ch4yM">Video Tutorial on YouTube.</a> 🎬👨‍💻 The tutorial guides you through every line of code, explaining the logic behind it and demonstrating how it affects the game. You'll discover how to set up the game window, create the Grid and block classes, add collision detection, and implement sound effects. By the end of the tutorial, you'll have a fully functional Tetris game that you can play and modify however you like. ☕ So, grab a cup of coffee and let's dive into the exciting world of game development with raylib! 🚀
-
-# Video Tutorial
+A fully functional Tetris game built with C++ and raylib — featuring graphics, input handling, audio, collision detection, and a clean class-based architecture. A great resource for aspiring game developers looking to learn raylib game programming.
 
 <p align="center">
-  <img src="preview.jpg" alt="" width="960">
+  <a href="https://youtu.be/wVYKG_ch4yM">
+    <img src="preview.jpg" alt="C++ Tetris Game using raylib — click to watch tutorial" width="960">
+  </a>
 </p>
 
 <p align="center">
-🎥 <a href="https://youtu.be/wVYKG_ch4yM">Video Tutorial on YouTube</a>
+  <a href="https://youtu.be/wVYKG_ch4yM">
+    <img src="https://img.shields.io/badge/▶%20Watch%20the%20Video%20Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch the Video Tutorial on YouTube">
+  </a>
 </p>
 
-<br>
-<br>
-<p align="center">
-| 📺 <a href="https://www.youtube.com/channel/UC3ivOTE5EgpmF2DHLBmWIWg">My YouTube Channel</a>
-| 🌍 <a href="http://www.programmingwithnick.com">My Website</a> | <br>
-</p>
+---
+
+## What you'll learn
+
+| | Topic | Details |
+|---|---|---|
+| 🪟 | **Game window setup** | Initialise raylib and configure the game loop |
+| 🟦 | **Grid & block classes** | Clean object-oriented design for the Tetris board |
+| 💥 | **Collision detection** | Prevent blocks from overlapping or leaving bounds |
+| 🔊 | **Sound effects** | Add audio feedback using raylib's audio API |
+| 🎮 | **Input handling** | Keyboard controls for movement and rotation |
+
+---
+
+## What's inside
+
+The repository contains the full source code for the game — well-structured and easy to read, with every class and function explained in the accompanying video tutorial.
+
+The game runs on **Windows**, **macOS**, and **Linux**.
+
+---
+
+## Resources
+
+🎥 [Video Tutorial on YouTube](https://youtu.be/wVYKG_ch4yM)
+&nbsp;&nbsp;|&nbsp;&nbsp;
+📺 [My YouTube Channel](https://www.youtube.com/channel/UC3ivOTE5EgpmF2DHLBmWIWg)
